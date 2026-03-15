@@ -2,7 +2,7 @@
   "name": "keynudge",
   "displayName": "KeyNudge",
   "description": "Learn VS Code shortcuts by doing. KeyNudge reminds you of keyboard shortcuts when you repeatedly use commands without them.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "0xvnft",
   "author": {
     "name": "0xvNFT",
