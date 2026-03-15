@@ -1,0 +1,181 @@
+{
+  "name": "keynudge",
+  "displayName": "KeyNudge",
+  "description": "Learn VS Code shortcuts by doing. KeyNudge reminds you of keyboard shortcuts when you repeatedly use commands without them.",
+  "version": "0.1.0",
+  "publisher": "0xvnft",
+  "author": {
+    "name": "0xvNFT",
+    "email": "0xvnft@gmail.com",
+    "url": "https://github.com/0xvNFT"
+  },
+  "license": "MIT",
+  "icon": "assets/icon.png",
+  "galleryBanner": {
+    "color": "#1e1e1e",
+    "theme": "dark"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/0xvNFT/keynudge"
+  },
+  "bugs": {
+    "url": "https://github.com/0xvNFT/keynudge/issues"
+  },
+  "homepage": "https://github.com/0xvNFT/keynudge#readme",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Education",
+    "Other"
+  ],
+  "keywords": [
+    "shortcuts",
+    "keybindings",
+    "productivity",
+    "learning",
+    "keyboard"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "keynudge",
+          "title": "KeyNudge",
+          "icon": "assets/activity-icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "keynudge": [
+        {
+          "id": "keynudge.hitList",
+          "name": "Shortcut Hit List",
+          "when": "true"
+        }
+      ]
+    },
+    "commands": [
+      { "command": "keynudge.resetStats",   "title": "KeyNudge: Reset Statistics" },
+      { "command": "keynudge.toggleEnabled","title": "KeyNudge: Toggle Enable/Disable" },
+      { "command": "keynudge.showHitList",  "title": "KeyNudge: Show Hit List" },
+      { "command": "keynudge.shortcut.workbench_action_files_save",              "title": "KeyNudge: Save File (tracked)" },
+      { "command": "keynudge.shortcut.workbench_action_files_saveAll",           "title": "KeyNudge: Save All (tracked)" },
+      { "command": "keynudge.shortcut.workbench_action_closeActiveEditor",       "title": "KeyNudge: Close Editor (tracked)" },
+      { "command": "keynudge.shortcut.workbench_action_quickOpen",               "title": "KeyNudge: Quick Open (tracked)" },
+      { "command": "keynudge.shortcut.undo",                                     "title": "KeyNudge: Undo (tracked)" },
+      { "command": "keynudge.shortcut.redo",                                     "title": "KeyNudge: Redo (tracked)" },
+      { "command": "keynudge.shortcut.editor_action_copyLinesDownAction",        "title": "KeyNudge: Copy Line Down (tracked)" },
+      { "command": "keynudge.shortcut.editor_action_deleteLinesAction",          "title": "KeyNudge: Delete Line (tracked)" },
+      { "command": "keynudge.shortcut.editor_action_addCommentLine",             "title": "KeyNudge: Toggle Comment (tracked)" },
+      { "command": "keynudge.shortcut.editor_action_formatDocument",             "title": "KeyNudge: Format Document (tracked)" },
+      { "command": "keynudge.shortcut.workbench_action_showCommands",            "title": "KeyNudge: Command Palette (tracked)" },
+      { "command": "keynudge.shortcut.workbench_action_gotoLine",                "title": "KeyNudge: Go to Line (tracked)" },
+      { "command": "keynudge.shortcut.workbench_action_navigateBack",            "title": "KeyNudge: Navigate Back (tracked)" },
+      { "command": "keynudge.shortcut.workbench_action_navigateForward",         "title": "KeyNudge: Navigate Forward (tracked)" },
+      { "command": "keynudge.shortcut.editor_action_goToDeclaration",            "title": "KeyNudge: Go to Definition (tracked)" },
+      { "command": "keynudge.shortcut.editor_action_referenceSearch_trigger",    "title": "KeyNudge: Find All References (tracked)" },
+      { "command": "keynudge.shortcut.workbench_action_findInFiles",             "title": "KeyNudge: Find in Files (tracked)" },
+      { "command": "keynudge.shortcut.workbench_action_toggleSidebarVisibility", "title": "KeyNudge: Toggle Sidebar (tracked)" },
+      { "command": "keynudge.shortcut.workbench_action_togglePanel",             "title": "KeyNudge: Toggle Panel (tracked)" },
+      { "command": "keynudge.shortcut.workbench_action_terminal_toggleTerminal", "title": "KeyNudge: Toggle Terminal (tracked)" },
+      { "command": "keynudge.shortcut.editor_action_rename",                     "title": "KeyNudge: Rename Symbol (tracked)" },
+      { "command": "keynudge.shortcut.editor_action_quickFix",                   "title": "KeyNudge: Quick Fix (tracked)" },
+      { "command": "keynudge.shortcut.editor_action_selectHighlights",           "title": "KeyNudge: Select All Occurrences (tracked)" },
+      { "command": "keynudge.shortcut.editor_action_addSelectionToNextFindMatch","title": "KeyNudge: Add Next Occurrence (tracked)" }
+    ],
+    "keybindings": [
+      { "command": "keynudge.shortcut.workbench_action_files_save",              "key": "ctrl+s",             "mac": "cmd+s" },
+      { "command": "keynudge.shortcut.workbench_action_files_saveAll",           "key": "ctrl+k s",           "mac": "cmd+alt+s" },
+      { "command": "keynudge.shortcut.workbench_action_closeActiveEditor",       "key": "ctrl+w",             "mac": "cmd+w" },
+      { "command": "keynudge.shortcut.workbench_action_quickOpen",               "key": "ctrl+p",             "mac": "cmd+p" },
+      { "command": "keynudge.shortcut.undo",                                     "key": "ctrl+z",             "mac": "cmd+z",          "when": "textInputFocus" },
+      { "command": "keynudge.shortcut.redo",                                     "key": "ctrl+y",             "mac": "cmd+shift+z",    "when": "textInputFocus" },
+      { "command": "keynudge.shortcut.editor_action_copyLinesDownAction",        "key": "shift+alt+down",     "mac": "shift+alt+down", "when": "editorTextFocus" },
+      { "command": "keynudge.shortcut.editor_action_deleteLinesAction",          "key": "ctrl+shift+k",       "mac": "cmd+shift+k",    "when": "editorTextFocus" },
+      { "command": "keynudge.shortcut.editor_action_addCommentLine",             "key": "ctrl+/",             "mac": "cmd+/",          "when": "editorTextFocus" },
+      { "command": "keynudge.shortcut.editor_action_formatDocument",             "key": "shift+alt+f",        "mac": "shift+alt+f",    "when": "editorTextFocus" },
+      { "command": "keynudge.shortcut.workbench_action_showCommands",            "key": "ctrl+shift+p",       "mac": "cmd+shift+p" },
+      { "command": "keynudge.shortcut.workbench_action_gotoLine",                "key": "ctrl+g",             "mac": "ctrl+g" },
+      { "command": "keynudge.shortcut.workbench_action_navigateBack",            "key": "alt+left",           "mac": "ctrl+-" },
+      { "command": "keynudge.shortcut.workbench_action_navigateForward",         "key": "alt+right",          "mac": "ctrl+shift+-" },
+      { "command": "keynudge.shortcut.editor_action_goToDeclaration",            "key": "f12",                                         "when": "editorTextFocus" },
+      { "command": "keynudge.shortcut.editor_action_referenceSearch_trigger",    "key": "shift+f12",                                   "when": "editorTextFocus" },
+      { "command": "keynudge.shortcut.workbench_action_findInFiles",             "key": "ctrl+shift+f",       "mac": "cmd+shift+f" },
+      { "command": "keynudge.shortcut.workbench_action_toggleSidebarVisibility", "key": "ctrl+b",             "mac": "cmd+b" },
+      { "command": "keynudge.shortcut.workbench_action_togglePanel",             "key": "ctrl+j",             "mac": "cmd+j" },
+      { "command": "keynudge.shortcut.workbench_action_terminal_toggleTerminal", "key": "ctrl+`",             "mac": "ctrl+`" },
+      { "command": "keynudge.shortcut.editor_action_rename",                     "key": "f2",                                          "when": "editorTextFocus" },
+      { "command": "keynudge.shortcut.editor_action_quickFix",                   "key": "ctrl+.",             "mac": "cmd+.",           "when": "editorTextFocus" },
+      { "command": "keynudge.shortcut.editor_action_selectHighlights",           "key": "ctrl+shift+l",       "mac": "cmd+shift+l",    "when": "editorTextFocus" },
+      { "command": "keynudge.shortcut.editor_action_addSelectionToNextFindMatch","key": "ctrl+d",             "mac": "cmd+d",           "when": "editorTextFocus" }
+    ],
+    "configuration": {
+      "title": "KeyNudge",
+      "properties": {
+        "keynudge.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable or disable KeyNudge reminders."
+        },
+        "keynudge.nudgeThreshold": {
+          "type": "number",
+          "default": 3,
+          "minimum": 1,
+          "maximum": 20,
+          "description": "Number of times a command must be used before showing a shortcut reminder."
+        },
+        "keynudge.notificationStyle": {
+          "type": "string",
+          "enum": [
+            "statusBar",
+            "notification",
+            "both"
+          ],
+          "default": "statusBar",
+          "description": "How KeyNudge displays shortcut reminders."
+        },
+        "keynudge.ignoredCommands": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [],
+          "description": "List of command IDs to never show reminders for."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run build:prod",
+    "build": "node esbuild.config.js",
+    "build:prod": "node esbuild.config.js --production",
+    "watch": "node esbuild.config.js --watch",
+    "compile:test": "tsc -p tsconfig.json --outDir out",
+    "pretest": "npm run compile:test",
+    "test": "node ./out/test/runTest.js",
+    "lint": "eslint src --ext ts",
+    "package": "vsce package",
+    "publish": "vsce publish"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.85.0",
+    "@typescript-eslint/eslint-plugin": "^6.15.0",
+    "@typescript-eslint/parser": "^6.15.0",
+    "@vscode/test-electron": "^2.3.8",
+    "@vscode/vsce": "^2.22.0",
+    "esbuild": "^0.20.0",
+    "eslint": "^8.56.0",
+    "glob": "^13.0.6",
+    "mocha": "^10.2.0",
+    "typescript": "^5.3.3"
+  }
+}
